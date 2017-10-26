@@ -4,4 +4,3 @@ const connectionstring = process.env.DATABASE_URL || 'postgres://139.162.84.23:5
 const client = new pg.client(connectionstring);
 client.connect();
 const query = client.query('');
-query.on('end',() => { client.end(); });
